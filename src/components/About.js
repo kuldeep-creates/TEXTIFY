@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function About({ mode }) {
   const [activeSection, setActiveSection] = useState("intro");
 
-  const avatarUrl = "./WWW.png";
+  const avatarUrl = "/WWW.png";
 
   const navItems = [
     { id: "intro", label: "About TEXTIFY", icon: "📖" },
