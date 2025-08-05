@@ -51,7 +51,7 @@ function App() {
   }, [mode]);
 
   return (
-    <Router basename="/myweb">
+    <Router basename="/Textify">
       <Navbar
         title="TEXTIFY"
         aboutext="ABOUT US"

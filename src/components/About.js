@@ -16,7 +16,7 @@ export default function About({ mode }) {
       case "intro":
         return (
           <>
-            <h2 className="mb-4 fs-2">📖 About TEXTIFY</h2>
+            <h2 className="mb-4 fs-2">📖 About Textify</h2>
             <ul className="fs-5 lh-lg">
               <li className="mb-2">Simple and modern case converter tool for students and content creators.</li>
               <li className="mb-2">Convert your text to <strong>UPPERCASE</strong>, <strong>lowercase</strong>, and more instantly.</li>
