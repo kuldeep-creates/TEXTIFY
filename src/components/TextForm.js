@@ -27,14 +27,19 @@ export default function TextForm(props) {
   };
 
   const TitleText = () => {
-    if (text.length === 0) return;
-    const list = text.trim().split(/\s+/);
-    const newText = list
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-    setText(newText);
-    props.showAlert("Converted to Title Case", "success");
-  };
+  if (text.length === 0) return;
+
+  const list = text.trim().split(/\s+/);
+  const newText = list
+    .map(word => {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+
+  setText(newText);
+  props.showAlert("Converted to Title Case", "success");
+};
+
 
   const AlternatingText = () => {
     if (text.length === 0) return;
