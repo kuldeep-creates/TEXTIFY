@@ -4,7 +4,11 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import TextForm from "./components/TextForm";
 import Alert from "./components/alert";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("dark");
@@ -51,7 +55,7 @@ function App() {
   }, [mode]);
 
   return (
-    <Router basename="/Textify">
+    <Router>
       <Navbar
         title="TEXTIFY"
         aboutext="ABOUT US"
