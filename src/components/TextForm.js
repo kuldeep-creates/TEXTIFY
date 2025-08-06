@@ -75,7 +75,7 @@ export default function TextForm(props) {
           <textarea
             value={text}
             onChange={handleonchange}
-            className={`form-control text-light custom-textarea ${props.darkMode === "dark" ? "dark-mode" : ""}`}
+            className={`form-control  custom-textarea ${props.darkMode === "dark" ? "dark-mode" : ""}`}
             id="exampleFormControlTextarea1"
             rows="4"
             placeholder="Type something here..."
