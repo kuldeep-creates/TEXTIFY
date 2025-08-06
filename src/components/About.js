@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import logo from "./images/logo.png"; 
+
+
 
 export default function About({ mode }) {
   const [activeSection, setActiveSection] = useState("intro");
 
-  const avatarUrl = "/WWW.png";
 
   const navItems = [
     { id: "intro", label: "About TEXTIFY", icon: "📖" },
@@ -81,7 +83,7 @@ export default function About({ mode }) {
           <aside className="col-md-3 border-end d-flex flex-column align-items-center pt-4">
             <div className="text-center mb-4">
               <img
-                src={avatarUrl}
+                src={logo}
                 alt="avatar"
                 className="img-fluid pd-10"
                 style={{ maxWidth: "100px" }}

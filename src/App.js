@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import TextForm from "./components/TextForm";
 import Alert from "./components/alert";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("dark");
