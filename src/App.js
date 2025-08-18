@@ -63,7 +63,7 @@ function App() {
         toggleMode4={toggleMode4}
         toggleMode5={toggleMode5}
       />
-      <Alert alart={alert} />
+            <Alert alert={alert} />
       <div className="container">
         <Routes>
           <Route

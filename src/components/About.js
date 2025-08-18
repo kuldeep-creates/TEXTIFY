@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./images/logo.png"; 
 
 
 
@@ -81,14 +80,6 @@ export default function About({ mode }) {
       <div className="container-fluid">
         <div className="row flex-column flex-md-row" style={{ minHeight: "80vh" }}>
           <aside className="col-md-3 border-end d-flex flex-column align-items-center pt-4">
-            <div className="text-center mb-4">
-              <img
-                src={logo}
-                alt="avatar"
-                className="img-fluid pd-10"
-                style={{ maxWidth: "100px" }}
-              />
-            </div>
             <nav className="nav flex-column w-100 px-3 d-flex align-items-center">
               {navItems.map((item) => (
                 <button

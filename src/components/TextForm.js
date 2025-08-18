@@ -2,31 +2,31 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 export default function TextForm(props) {
-  const handleonclick = () => {
+  const handleUppercaseClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
     props.showAlert("Converted to Uppercase", "success");
   };
 
-  const handleloclick = () => {
+  const handleLowercaseClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
     props.showAlert("Converted to Lowercase", "success");
   };
 
-  const handleclick = () => {
+  const handleClearClick = () => {
     setText("");
     props.showAlert("Write Something", "danger");
   };
 
-  const capitalizeText = () => {
+  const handleCapitalizeClick = () => {
     if (text.length === 0) return;
     let newText2 = text.charAt(0).toUpperCase() + text.slice(1);
     setText(newText2);
     props.showAlert("First letter capitalized", "success");
   };
 
-  const TitleText = () => {
+  const handleTitleCaseClick = () => {
   if (text.length === 0) return;
 
   const list = text.trim().split(/\s+/);
@@ -41,7 +41,7 @@ export default function TextForm(props) {
 };
 
 
-  const AlternatingText = () => {
+  const handleAlternatingCaseClick = () => {
     if (text.length === 0) return;
     let newText4 = "";
     for (let i = 0; i < text.length; i++) {
@@ -51,7 +51,7 @@ export default function TextForm(props) {
     props.showAlert("Converted to Alternating Case", "success");
   };
 
-  const InverseText = () => {
+  const handleInverseCaseClick = () => {
     if (text.length === 0) return;
     let newText5 = "";
     for (let i = 0; i < text.length; i++) {
@@ -61,7 +61,7 @@ export default function TextForm(props) {
     props.showAlert("Converted to Inverse Case", "success");
   };
 
-  const handleonchange = (event) => {
+  const handleTextChange = (event) => {
     setText(event.target.value);
   };
 
@@ -74,7 +74,7 @@ export default function TextForm(props) {
         <div className="mb-3">
           <textarea
             value={text}
-            onChange={handleonchange}
+            onChange={handleTextChange}
             className={`form-control  custom-textarea ${props.darkMode === "dark" ? "dark-mode" : ""}`}
             id="exampleFormControlTextarea1"
             rows="4"
@@ -89,25 +89,25 @@ export default function TextForm(props) {
 
         </div>
         <div className="d-flex flex-wrap justify-content-center">
-          <button className="btn btn-primary m-2" onClick={handleonclick}>
+          <button className="btn btn-primary m-2" onClick={handleUppercaseClick}>
             Uppercase
           </button>
-          <button className="btn btn-primary m-2" onClick={handleloclick}>
+          <button className="btn btn-primary m-2" onClick={handleLowercaseClick}>
             Lowercase
           </button>
-          <button className="btn btn-primary m-2" onClick={capitalizeText}>
+          <button className="btn btn-primary m-2" onClick={handleCapitalizeClick}>
             Capitalize First
           </button>
-          <button className="btn btn-primary m-2" onClick={TitleText}>
+          <button className="btn btn-primary m-2" onClick={handleTitleCaseClick}>
             Title Case
           </button>
-          <button className="btn btn-primary m-2" onClick={AlternatingText}>
+          <button className="btn btn-primary m-2" onClick={handleAlternatingCaseClick}>
             Alternating Case
           </button>
-          <button className="btn btn-primary m-2" onClick={InverseText}>
+          <button className="btn btn-primary m-2" onClick={handleInverseCaseClick}>
             Inverse Case
           </button>
-          <button className="btn btn-danger m-2" onClick={handleclick}>
+          <button className="btn btn-danger m-2" onClick={handleClearClick}>
             Clear
           </button>
         </div>
